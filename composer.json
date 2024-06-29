@@ -1,0 +1,23 @@
+{
+    "name": "sivakarthik229/dynamic_block",
+    "type": "drupal-module",
+    "description": "This module allows you to add the dynamic content block plugin",
+    "homepage": "https://github.com/sivakarthik229/dynamic_block",
+    "authors": [
+      {
+        "name": "Siva Karthik Reddy",
+        "homepage": "https://github.com/sivakarthik229",
+        "role": "Owner"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/sivakarthik229/dynamic_block/issues",
+      "source": "https://github.com/sivakarthik229/dynamic_block.git"
+    },
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+      "drupal/core": "^10 || ^11"
+    }
+  }
+  
