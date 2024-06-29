@@ -1,0 +1,5 @@
+name: 'Dynamic block content'
+type: module
+description: 'Dynamic block content'
+package: 'Dynamic block'
+core_version_requirement: ^10 || ^11

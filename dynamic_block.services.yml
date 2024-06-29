@@ -1,0 +1,14 @@
+services:
+  cache_context.user_country:
+    class: \Drupal\dynamic_block\Cache\Context\UserCountryCacheContext
+    arguments: ['@request_stack', '@dynamic_block.service']
+    tags:
+      - { name: cache.context }
+  dynamic_block.service:
+    class: \Drupal\dynamic_block\Service\DynamicBlockService
+    arguments: ['@http_client']
+  dynamic_block.node_history:
+    class: \Drupal\dynamic_block\EventSubscriber\DynamicBlockEventSubscriber
+    arguments: ['@path_alias.manager']
+    tags:
+      - { name: event_subscriber }

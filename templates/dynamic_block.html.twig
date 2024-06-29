@@ -1,0 +1,8 @@
+<div class="dynamic-block-content">
+  {% if dynamic_block_content["items"] > 0 %}
+    {{ dynamic_block_content.content }}
+    {{ dynamic_block_content.cid }}
+  {% else %}
+    <p>{{ "No content configured for this block"|t }}</p>
+  {% endif %}
+</div>

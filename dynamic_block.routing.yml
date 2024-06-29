@@ -1,0 +1,7 @@
+dynamic_content_block.settings:
+  path: '/admin/config/dynamic-content-block/settings'
+  defaults:
+    _form: '\Drupal\dynamic_block\Form\DynamicContentBlockSettings'
+    _title: 'Dynamic content block settings'
+  requirements:
+    _permission: 'administer site configuration'
