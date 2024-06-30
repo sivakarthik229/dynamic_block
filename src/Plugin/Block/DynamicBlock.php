@@ -105,12 +105,12 @@ class DynamicBlock extends BlockBase implements ContainerFactoryPluginInterface 
       }
     }
     elseif ($dynamic_content_priority == 'location_based') {
+      // Test IP addresses.
       // India 49.43.232.136.
       // Uk 178.238.11.6.
       // France 176.31.84.249.
       // China 218.107.132.66.
       $ip = $this->request->getClientIp();
-      $ip = '218.107.132.66';
       $location_details = $this->dynamicBlockService->getUserLocationDetails($ip);
       $cid = 'dynamic_block_content_demo_' . $location_details['geoplugin_countryCode'];
     }
@@ -166,7 +166,6 @@ class DynamicBlock extends BlockBase implements ContainerFactoryPluginInterface 
       elseif ($dynamic_content_priority == 'location_based') {
         $location_based_settings = $dynamic_block_settings->get('dynamic_block_content_location_group');
         $ip = $this->request->getClientIp();
-        $ip = '218.107.132.66';
         $location_details = $this->dynamicBlockService->getUserLocationDetails($ip);
         foreach ($location_based_settings as $location_settings) {
           if (!empty($location_details['geoplugin_countryCode']) && strtolower($location_details['geoplugin_countryCode']) == $location_settings['dynamic_block_content_locations']) {
